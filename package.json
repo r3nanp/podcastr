@@ -2,7 +2,8 @@
   "name": "podcastr",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/r3nanp/podcastr",
+  "author": "Renan Pereira <renanmol87@gmail.com>",
+  "homepage": "https://podcastr.r3nanp.vercel.app/",
   "repository": {
     "type": "git",
     "url": "https://github.com/r3nanp/podcastr.git"
@@ -22,6 +23,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "lint": "eslint src/ --ext ts,tsx",
     "test": "jest"
   },
   "dependencies": {
