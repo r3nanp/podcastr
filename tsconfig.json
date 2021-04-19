@@ -19,9 +19,9 @@
     "jsx": "preserve",
     "baseUrl": "./src",
     "paths": {
-      "@components": ["components/*"],
-      "@styles": ["styles/*"],
-      "@contexts": ["contexts/*"]
+      "@components/*": ["components/*"],
+      "@styles/*": ["styles/*"],
+      "@contexts/*": ["contexts/*"]
     }
   },
   "include": [

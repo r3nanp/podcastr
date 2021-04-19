@@ -1,17 +1,19 @@
 {
-  "name": "nlw",
+  "name": "podcastr",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/r3nanp/nlw",
+  "homepage": "https://github.com/r3nanp/podcastr",
   "repository": {
     "type": "git",
-    "url": "https://github.com/r3nanp/nlw.git"
+    "url": "https://github.com/r3nanp/podcastr.git"
   },
   "keywords": [
-    "nlw"
+    "nlw",
+    "podcast",
+    "react"
   ],
   "bugs": {
-    "url": "https://github.com/r3nanp/nlw/issues"
+    "url": "https://github.com/r3nanp/podcastr/issues"
   },
   "engines": {
     "node": "14.x"
