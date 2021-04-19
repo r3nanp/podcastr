@@ -49,7 +49,7 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
-  @media(max-width:700px) {
+  @media(max-width: 700px) {
     html {
       font-size: 75%;
     }
