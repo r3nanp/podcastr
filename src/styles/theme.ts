@@ -8,3 +8,6 @@ export const theme = {
     white: '#29292e'
   }
 }
+
+export type ThemeName = keyof typeof theme
+export type ThemeType = typeof theme.light | typeof theme.dark
