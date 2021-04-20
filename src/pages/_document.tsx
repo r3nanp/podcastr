@@ -43,6 +43,14 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <meta name="theme-color" content="#ffffff" />
+          <link rel="shortcut icon" href="/favicon.png" />
+
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter&family=Lexend:wght@500;600&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />
