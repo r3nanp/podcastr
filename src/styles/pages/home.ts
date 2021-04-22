@@ -9,6 +9,10 @@ export const Wrapper = styled.div`
     margin-top: 3rem;
     margin-bottom: 1.5rem;
   }
+
+  @media (max-width: 768px) {
+    padding: 0 2rem;
+  }
 `
 
 export const LatestEpisodes = styled.section`
@@ -17,23 +21,11 @@ export const LatestEpisodes = styled.section`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-  }
-`
 
-export const EpisodeList = styled.li`
-  background: var(--white);
-  border: 1px solid var(--gray-100);
-  padding: 1.25rem;
-  border-radius: 1.5rem;
-  position: relative;
-
-  display: flex;
-  align-items: center;
-
-  img {
-    width: 6rem;
-    height: 6rem;
-    border-radius: 1rem;
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+    }
   }
 
   button {
@@ -60,6 +52,23 @@ export const EpisodeList = styled.li`
   }
 `
 
+export const EpisodeList = styled.li`
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  padding: 1.25rem;
+  border-radius: 1.5rem;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 1rem;
+  }
+`
+
 export const AllEpisodes = styled.section`
   padding-bottom: 2rem;
 
@@ -82,7 +91,7 @@ export const AllEpisodes = styled.section`
     td {
       font-size: 0.875rem;
 
-      .img-thumb {
+      img {
         width: 2.5rem;
         height: 2.5rem;
         border-radius: 0.5rem;
@@ -110,7 +119,7 @@ export const AllEpisodes = styled.section`
         border-radius: 0.675rem;
         transition: filter 0.3s;
 
-        img {
+        > img {
           width: 1.25rem;
           height: 1.25rem;
         }
@@ -168,7 +177,7 @@ export const EpisodeDetails = styled.div`
         left: 0;
         top: 50%;
 
-        transform: translate(-50%, -50%); // não é feitiçaria, é tecnologia.
+        transform: translate(-50%, -50%);
       }
     }
   }

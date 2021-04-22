@@ -4,9 +4,6 @@ export const Container = styled.div`
   max-width: 45rem;
   padding: 3rem 2rem;
   margin: 0 auto;
-
-  height: calc(100vh - 6.5rem);
-  overflow-y: scroll;
 `
 
 export const ThumbnailContainer = styled.div`
