@@ -10,6 +10,7 @@ import { api } from 'services/api'
 import { convertDurationToTimeString } from 'utils/convertDurationToTimeString'
 
 import * as S from 'styles/pages/episode'
+import { usePlayer } from '@hooks/usePlayer'
 
 interface Episode {
   id: string
@@ -28,11 +29,8 @@ type SlugProps = {
 }
 
 export default function Slug({ episode }: SlugProps): ReactElement {
-  const { isFallback, push } = useRouter()
-
-  if (isFallback) {
-    return <p>Loading...</p>
-  }
+  const { push } = useRouter()
+  const { play } = usePlayer()
 
   const handleGoBack = () => push('/')
 
@@ -52,7 +50,7 @@ export default function Slug({ episode }: SlugProps): ReactElement {
           alt={episode.title}
           objectFit="cover"
         />
-        <button type="button">
+        <button type="button" onClick={() => play(episode)}>
           <img src="/play.svg" alt="Tocar" />
         </button>
       </S.ThumbnailContainer>
@@ -111,6 +109,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: true
+    fallback: 'blocking'
   }
 }
