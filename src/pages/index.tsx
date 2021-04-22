@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { format, parseISO } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
 
+import { usePlayer } from '@hooks/usePlayer'
 import { SEO } from '@components/SEO'
 import { api } from 'services/api'
 import { convertDurationToTimeString } from 'utils/convertDurationToTimeString'
@@ -31,6 +32,8 @@ export default function Home({
   allEpisodes,
   latestEpisodes
 }: HomeProps): ReactElement {
+  const { play } = usePlayer()
+
   return (
     <S.Wrapper>
       <SEO title="Podcastr | Home" />
@@ -48,6 +51,7 @@ export default function Home({
                   src={episode.thumbnail}
                   alt={episode.title}
                   objectFit="cover"
+                  className="thumb"
                 />
 
                 <S.EpisodeDetails>
@@ -60,7 +64,7 @@ export default function Home({
                   <span>{episode.durationAsString}</span>
                 </S.EpisodeDetails>
 
-                <button type="button">
+                <button type="button" onClick={() => play(episode)}>
                   <img src="/play-green.svg" alt="Tocar episódio" />
                 </button>
               </S.EpisodeList>
@@ -92,7 +96,6 @@ export default function Home({
                       height={120}
                       src={episode.thumbnail}
                       alt={episode.title}
-                      className="img-thumb"
                     />
                   </td>
                   <td>
@@ -105,7 +108,7 @@ export default function Home({
                   <td style={{ width: 100 }}>{episode.publishedAt}</td>
                   <td>{episode.durationAsString}</td>
                   <td>
-                    <button type="button">
+                    <button type="button" onClick={() => play(episode)}>
                       <img src="/play-green.svg" alt="Tocar episódio" />
                     </button>
                   </td>
