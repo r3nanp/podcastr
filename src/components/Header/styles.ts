@@ -20,4 +20,15 @@ export const Container = styled.header`
     margin-left: auto;
     text-transform: capitalize;
   }
+
+  @media (max-width: 768px) {
+    img {
+      width: 10rem;
+      height: 10rem;
+    }
+
+    p {
+      padding: 1rem;
+    }
+  }
 `
