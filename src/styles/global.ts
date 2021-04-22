@@ -39,6 +39,19 @@ export const GlobalStyles = createGlobalStyle`
     text-decoration: none;
   }
 
+  ::-webkit-scrollbar {
+    width: 6px;
+    background: var(--gray-50);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--gray-500);
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--gray-500);
+  }
+
   :root {
     ${props => {
       const theme = props.theme
