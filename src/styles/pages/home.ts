@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 export const Wrapper = styled.div`
   padding: 0 2.5rem;
@@ -55,7 +56,7 @@ export const LatestEpisodes = styled.section`
   }
 `
 
-export const EpisodeList = styled.li`
+export const EpisodeList = styled(motion.section)`
   background: var(--white);
   border: 1px solid var(--gray-100);
   padding: 1.25rem;
@@ -72,7 +73,7 @@ export const EpisodeList = styled.li`
   }
 `
 
-export const AllEpisodes = styled.section`
+export const AllEpisodes = styled(motion.section)`
   padding-bottom: 2rem;
 
   table {
