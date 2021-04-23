@@ -103,7 +103,7 @@ export const EmptyPlayer = styled.div`
 export const Footer = styled.footer`
   align-self: stretch;
 
-  &.empty {
+  &.empty .progress {
     opacity: 0.5;
   }
 
@@ -162,6 +162,16 @@ export const Buttons = styled.div`
 
     &:disabled {
       cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+    &.isActive {
+      filter: invert(0.35) sepia(1) saturate(3) hue-rotate(100deg);
+    }
+
+    &.isActive:hover {
+      filter: brightness(0.6) invert(0.35) sepia(1) saturate(3)
+        hue-rotate(100deg);
     }
 
     &.playButton {
