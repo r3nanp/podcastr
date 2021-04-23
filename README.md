@@ -1,3 +1,9 @@
+<div align="center">
+
+  ![Podcastr](./.github/logo.svg)
+
+</div>
+
 # Podcastr
 > The best podcast application!
 
@@ -11,6 +17,10 @@
 - Typescript
 - styled-components
 - Jest
+- react-icons
+- Next PWA
+- rc-slider
+- date-fns
 
 # 🎉 Contributing
 
