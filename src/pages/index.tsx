@@ -116,7 +116,7 @@ export default function Home({
       </S.LatestEpisodes>
 
       <S.AllEpisodes>
-        <h2>Todos episódios</h2>
+        <h2>Todos os episódios</h2>
 
         <table cellSpacing={0}>
           <thead>
