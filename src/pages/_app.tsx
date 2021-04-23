@@ -1,19 +1,16 @@
 import { ReactElement } from 'react'
 import { AppProps } from 'next/app'
-import { ThemeProvider } from 'styled-components'
 
+import { ThemeProvider } from '@contexts/ThemeContext'
 import { PlayerProvider } from '@contexts/PlayerContext'
-import { theme } from '@styles/theme'
-import { GlobalStyles } from '@styles/global'
 import { Wrapper } from '@styles/app'
 import { Header } from '@components/Header'
 import { Player } from '@components/Player'
 
 function MyApp({ Component, pageProps }: AppProps): ReactElement {
   return (
-    <PlayerProvider>
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
+    <ThemeProvider>
+      <PlayerProvider>
         <Wrapper>
           <main>
             <Header />
@@ -22,8 +19,8 @@ function MyApp({ Component, pageProps }: AppProps): ReactElement {
 
           <Player />
         </Wrapper>
-      </ThemeProvider>
-    </PlayerProvider>
+      </PlayerProvider>
+    </ThemeProvider>
   )
 }
 
