@@ -41,7 +41,8 @@ export const GlobalStyles = createGlobalStyle`
 
   ::-webkit-scrollbar {
     width: 6px;
-    background: var(--gray-50);
+    background: #fff;
+    border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb {
@@ -49,7 +50,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   ::-webkit-scrollbar-track {
-    background: var(--gray-500);
+    background: var(--gray-50);
   }
 
   :root {
@@ -86,5 +87,4 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 62.25%;
     }
   }
-
 `

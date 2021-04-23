@@ -1,17 +1,20 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  padding: 0 4rem;
+  padding: 0 2.5rem;
+  width: 100%;
   height: calc(100vh - 6.5rem);
   overflow-y: scroll;
+  overflow-x: hidden;
 
   h2 {
     margin-top: 3rem;
     margin-bottom: 1.5rem;
+    color: var(--gray-800);
   }
 
   @media (max-width: 768px) {
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
 `
 
