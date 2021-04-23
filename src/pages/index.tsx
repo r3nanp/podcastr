@@ -1,7 +1,8 @@
-import { ReactElement } from 'react'
+import { ReactElement, useMemo } from 'react'
 import { GetStaticProps } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import { format, parseISO } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
 
@@ -36,6 +37,35 @@ export default function Home({
 
   const episodeList = [...latestEpisodes, ...allEpisodes]
 
+  const spring = useMemo(
+    () => ({
+      type: 'spring',
+      damping: 50,
+      stiffness: 100
+    }),
+    []
+  )
+
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.4,
+        staggerChildren: 0.5
+      }
+    }
+  }
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1
+    }
+  }
+
   return (
     <S.Wrapper>
       <SEO title="Podcastr | Home" />
@@ -46,7 +76,12 @@ export default function Home({
         <ul>
           {latestEpisodes.map((episode, index) => {
             return (
-              <S.EpisodeList key={episode.id}>
+              <S.EpisodeList
+                key={episode.id}
+                initial="hidden"
+                animate="visible"
+                variants={container}
+              >
                 <Image
                   width={192}
                   height={192}
@@ -66,12 +101,14 @@ export default function Home({
                   <span>{episode.durationAsString}</span>
                 </S.EpisodeDetails>
 
-                <button
+                <motion.button
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.8 }}
                   type="button"
                   onClick={() => playList(episodeList, index)}
                 >
                   <img src="/play-green.svg" alt="Tocar episódio" />
-                </button>
+                </motion.button>
               </S.EpisodeList>
             )
           })}
@@ -91,10 +128,10 @@ export default function Home({
             <th></th>
           </thead>
 
-          <tbody>
+          <motion.tbody initial="hidden" animate="visible" variants={container}>
             {allEpisodes.map((episode, index) => {
               return (
-                <tr key={episode.id}>
+                <motion.tr transition={spring} variants={item} key={episode.id}>
                   <td style={{ width: 72 }}>
                     <Image
                       width={120}
@@ -113,19 +150,21 @@ export default function Home({
                   <td style={{ width: 100 }}>{episode.publishedAt}</td>
                   <td>{episode.durationAsString}</td>
                   <td>
-                    <button
+                    <motion.button
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
                       type="button"
                       onClick={() =>
                         playList(episodeList, index + latestEpisodes.length)
                       }
                     >
                       <img src="/play-green.svg" alt="Tocar episódio" />
-                    </button>
+                    </motion.button>
                   </td>
-                </tr>
+                </motion.tr>
               )
             })}
-          </tbody>
+          </motion.tbody>
         </table>
       </S.AllEpisodes>
     </S.Wrapper>
