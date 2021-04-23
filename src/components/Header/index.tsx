@@ -1,10 +1,13 @@
 import { ReactElement } from 'react'
 import format from 'date-fns/format'
 import ptBR from 'date-fns/locale/pt-BR'
+import { useTheme } from '@hooks/useTheme'
 
-import { Container } from './styles'
+import { Container, LightIcon, DarkIcon } from './styles'
 
 export function Header(): ReactElement {
+  const { theme, switchTheme } = useTheme()
+
   const currentDate = format(new Date(), 'EEEEEE, d MMMM', {
     locale: ptBR
   })
@@ -16,6 +19,12 @@ export function Header(): ReactElement {
       <p>O melhor para você ouvir, sempre.</p>
 
       <span>{currentDate}</span>
+
+      {theme === 'light' ? (
+        <LightIcon onClick={switchTheme} />
+      ) : (
+        <DarkIcon onClick={switchTheme} />
+      )}
     </Container>
   )
 }
