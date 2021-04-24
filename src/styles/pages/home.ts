@@ -45,6 +45,11 @@ export const LatestEpisodes = styled.section`
     border-radius: 0.675rem;
     transition: filter 0.3s;
 
+    @media (max-width: 768px) {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+
     img {
       width: 1.5rem;
       height: 1.5rem;
@@ -126,6 +131,11 @@ export const AllEpisodes = styled(motion.section)`
         > img {
           width: 1.25rem;
           height: 1.25rem;
+        }
+
+        @media (max-width: 768px) {
+          width: 3rem;
+          height: 3rem;
         }
 
         &:hover {
