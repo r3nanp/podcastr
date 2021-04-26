@@ -30,7 +30,7 @@ export function ThemeProvider({ children }: ThemeProps): ReactElement {
   }
 
   useEffect(() => {
-    const themeStoraged = localStorage.getItem('@MoveIt:theme')
+    const themeStoraged = localStorage.getItem('@Podcastr:theme')
 
     if (themeStoraged) {
       setTheme(JSON.parse(themeStoraged))
@@ -38,7 +38,7 @@ export function ThemeProvider({ children }: ThemeProps): ReactElement {
   }, [])
 
   useEffect(() => {
-    localStorage.setItem('@MoveIt:theme', JSON.stringify(theme))
+    localStorage.setItem('@Podcastr:theme', JSON.stringify(theme))
   }, [theme])
 
   return (
