@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> should render the image 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  fill: var(--purple-500);
+  margin: 0 1rem;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.c1:hover {
+  opacity: 0.7;
+}
+
+.c0 {
+  background: var(--white);
+  height: 6.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 2rem 4rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.c0 p {
+  margin-left: 2rem;
+  padding: 0.25rem 0 0.25rem 2rem;
+  border-left: 1px solid var(--gray-100);
+}
+
+.c0 span {
+  margin-left: auto;
+  text-transform: capitalize;
+}
+
+.c0 button {
+  font-size: 0;
+  border: none;
+  outline: 0;
+  background: transparent;
+}
+
+@media (max-width:768px) {
+  .c0 img {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .c0 p {
+    padding: 1rem;
+  }
+}
+
+<header
+  class="c0"
+>
+  <img
+    alt="Podcastr"
+    src="/logo.svg"
+  />
+  <p>
+    O melhor para você ouvir, sempre.
+  </p>
+  <span>
+    qua, 28 abril
+  </span>
+  <button
+    type="button"
+  >
+    <svg
+      class="c1"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      stroke-width="0"
+      viewBox="0 0 24 24"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M6.993 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007S14.761 6.993 12 6.993 6.993 9.239 6.993 12zM12 8.993c1.658 0 3.007 1.349 3.007 3.007S13.658 15.007 12 15.007 8.993 13.658 8.993 12 10.342 8.993 12 8.993zM10.998 19H12.998V22H10.998zM10.998 2H12.998V5H10.998zM1.998 11H4.998V13H1.998zM18.998 11H21.998V13H18.998z"
+      />
+      <path
+        d="M4.487 17.01H7.487V19.01H4.487z"
+        transform="rotate(-45.017 5.986 18.01)"
+      />
+      <path
+        d="M16.508 4.99H19.509V6.99H16.508z"
+        transform="rotate(-45.001 18.008 5.99)"
+      />
+      <path
+        d="M4.487 4.99H7.487V6.99H4.487z"
+        transform="rotate(-134.983 5.988 5.99)"
+      />
+      <path
+        d="M17.008 16.51H19.008V19.511000000000003H17.008z"
+        transform="rotate(134.999 18.008 18.01)"
+      />
+    </svg>
+  </button>
+</header>
+`;
