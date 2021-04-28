@@ -13,6 +13,7 @@ export default {
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
     prefix: '<rootDir>/src/'
   }),
+  modulePaths: ['<rootDir>/src/', '<rootDir>.jest'],
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
   testMatch: ['<rootDir>/src/**/*.spec.tsx'],
   transform: {
