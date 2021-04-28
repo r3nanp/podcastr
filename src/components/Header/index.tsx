@@ -20,7 +20,7 @@ export function Header(): ReactElement {
 
       <span>{currentDate}</span>
 
-      <button aria-hidden="false" type="button" onClick={switchTheme}>
+      <button type="button" onClick={switchTheme}>
         {theme === 'light' ? <LightIcon /> : <DarkIcon />}
       </button>
     </Container>
