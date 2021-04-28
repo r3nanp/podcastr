@@ -25,8 +25,9 @@
     "start": "next start",
     "server": "json-server server.json -w -d 750 -p 3333",
     "lint": "eslint src/ --ext ts,tsx",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "test": "jest --maxWorkers=25%",
+    "test:ci": "jest --runInBand",
+    "test:watch": "jest --watch --maxWorkers=15%"
   },
   "dependencies": {
     "axios": "^0.21.1",
