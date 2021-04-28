@@ -47,6 +47,13 @@ export const Container = styled.header`
     text-transform: capitalize;
   }
 
+  button {
+    font-size: 0;
+    border: none;
+    outline: 0;
+    background: transparent;
+  }
+
   @media (max-width: 768px) {
     img {
       width: 10rem;
