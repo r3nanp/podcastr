@@ -2,8 +2,10 @@ import { pathsToModuleNameMapper } from 'ts-jest/utils'
 import { compilerOptions } from './tsconfig.json'
 
 export default {
-  clearMocks: true,
+  testEnvironment: 'jsdom',
+  collectCoverage: true,
   coverageDirectory: 'coverage',
+  collectCoverageFrom: ['src/**/*.spec.tsx'],
   coverageProvider: 'v8',
   preset: 'ts-jest',
   roots: ['<rootDir>'],
