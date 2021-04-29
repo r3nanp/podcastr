@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Header /> should render the image 1`] = `
+exports[`<Header /> should render the logo 1`] = `
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -85,7 +85,7 @@ exports[`<Header /> should render the image 1`] = `
     O melhor para você ouvir, sempre.
   </p>
   <span>
-    qua, 28 abril
+    qui, 29 abril
   </span>
   <button
     type="button"
