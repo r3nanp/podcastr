@@ -3,20 +3,19 @@ name: Lint
 on: pull_request
 
 jobs:
-  code:
-    name: Lint code
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Use Node.js 12
+      - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: "12"
+          node-version: 14.x
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        run: yarn install
 
       - name: Run ESLint
         run: yarn lint
